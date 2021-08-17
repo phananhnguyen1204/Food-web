@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Web</title>
+    <link rel="stylesheet" href='css/Home.css'>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+    </style>
+</head>
+<body>
+    <div class='background'>
+    </div>
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <header>
+      <a class='logo' href="Home.html"><img id='logo' src="Image/logo (1).png" alt="logo" width=70px height=70px></a>
+      <ul class="nav-bar">   
+        <li class="nav-item home">
+          <a href="Home.html" class="nav-list" >Home</a>
+        </li>
+        <li class="nav-item about-us">
+          <a href="About us.html" class="nav-list" >About Us</a>
+        </li>
+        <li class="nav-item menu">
+          <a href="Menu.html" class="nav-list">Menu</a>
+        </li>
+        <li class="nav-item contact">
+          <a href="Contact.html" class="nav-list">Contact</a>
+        </li>
+        
+      </ul>
+    </header>
+    <main>
+      <div class='content'>
+        <div class="content-text">
+          <h2>It's not a coffee<br>It's <span>Star Bucks</span></h2>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <a href="Menu.html" id="btn">Learn More</a>
+        </div>
+        <div class="big-image">
+          <img id='big-image' src="Image/img1.png" >
+        </div>
+      </div>
+      <ui class='thumb'>
+        <li class='thumb-list'><img onmouseover="imageSlider('Image/img1.png'); changeBackgroundColor('#017143')" id='thumb1'src='Image/thumb1.png' alt='thumb1' width=70px height=100px ></li>
+        <li class='thumb-list'> <img onmouseover="imageSlider('Image/img2.png'); changeBackgroundColor('#eb7495')" id='thumb2' src='Image/thumb2.png' alt='thumb2' width=70px height=100px></li>
+        <li class='thumb-list'><img onmouseover="imageSlider('Image/img3.png'); changeBackgroundColor('#d752b1')" id='thumb3' src='Image/thumb3.png' alt='thumb3' width=70px height=100px></li>
+      </ui>
+    </main>
+    <footer>
+      <ui class='footer'>
+        <li class='facebook'><a href='#'><img class='icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAR9JREFUWEftl2ENwkAMhb85QAIOkABIwAEOQAIoABwgARyAAxwADnAAaQLJOLpdj45lIdd/2/X63l679q6gY1Z0jA+ZUCwjTSs0AoYB6AnYx4i81psiNAVWQK8C2Ixjdqz5wvmTTJ0IZhyzYwVaHzgb0mHGMTtWgK6BWZcIHZQiPgJSUxcD0Q8Xr0LyBw2CqGNAiH5lXkJ3BdUV07UZyITCjCwCVeRZ8ym/uwJba0GlpkxLUQxL/joZKSZrg9AGkG5usjYILQEttSrBNghNgJ1JHkg+oIW1IKNDa4xlfGmet18RCuNqoyNV9beYrs3PEREeyFwxXZszIUMh5hqKiZQVygr9XR+S24XczcpmnuxaPXgVitVY8nomFJOscwo9AIvbKSX6datTAAAAAElFTkSuQmCC"/></a></li>
+        <li class='twitter'><a href='#'><img class='icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAe9JREFUWEftl4EtREEQhv+rgA7oABWgAjpABagAFaADKkAFlEAF6IAO5JPdl727nX0zL3dxkjfJ5XJ2dvbff/6ZHROtmE1WDI9GQH0ZGRn6C4a2JZ1K2pS0J+lV0oukW0kfBaD15MN6Z7WU5UB3fbeprJ9Jum7sO0mgDiQdS9qZAVmtshyUzRFQh5IeApc4l3Qz619jCHp3k6MXFPS/S+LbY1yU9MEQTH3lTTVAj5KgNBu/AdZtqpwYZYcQ34XGmhqq6QAw/P3euP6lpAsPNcnnLTEzJWjWagxRGc9GcIDBGBVTBkMLVJbXriRxiTmzGiM5PnJEB1ROJRfxWlXQFkPoAWHDRBa39yCv3346w8VQFjU391aNF0j2CwGKCjQKxsrMbxyrU9NTlmVPkpBF1SxRL5MlU9BN6lKfANjGAqmiGfJWmk22NQ9RxmupX/CCL8LM/pOD9wGyGuQQcL3s9KWMdW+D9AB0PdSeEbZ8/T0H13yalVVu8ADCHz3xoVy3gqh4SNnbmha6kF5AbKDieEAj3TsExqMhqgtGAEO5RoxRhZHFxYxVZVDL4ZT70FL/TD0M7YXNejq4GaMlwLxGeqjKuTnZG8CTsizmPOvkcYTDSQVzMTMRE0L5L04Ew5RvRNSDD4lsHAH1sTUy9O8Y+gEpWlYl824o1gAAAABJRU5ErkJggg=="/></a></li>
+        <li class='insta'><a href='#'><img class='icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAmNJREFUWEftmD1SVUEQhQ8rkBWIBMZoRAgEVJEJqZGuQFiByAaAlASICMFQEjQ1UVegS4AVQH1WN9UO8/PmvlvyArrq1rvFzPScOd19pi9zmjGbmzE8egLUikgPQ68kPZO02nKajH+VdCPp5yTrJgH0TtJHSS8mcViZ80fSrqTTmp8aoHlJ5wMYaeGGsS1J17mJNUAsXLFFnOrCntaG6TgHI8zbwR++13oAEaZjW/Be0kkvisJ8Qkb4sazfEkPEe8HiDbhpjMO8lLQn6Ysl95Ik9lhMHecAUU0/bCK0Qu9Qi0x/l7QsKf7tdVp9OUDE+8oQtKrQ88IrkFNzgENbvy7p0t7PJL21av1dOnBuwxjnEiBYJMf4zRmaQ47wuyHpuaSjMPHW3j+ZFNwP1QD9KmwYQ4oj5nlYYZf8cHsQEhsYBOhbQYM4NZuivuQDchBt06oSVWcuoFIbDRA5s2/eEbcUjG8MKEQV25F0kCAaDRAA3liYSvnjezuTiGoqHaMB8k2oItiqGax8KITtUQHlimM0QB6yUrJGxv5LyGYuqWHAT077gPjlyh7R5JYvadmgkGUvPxNLv+scYBTGWH2jCiOb1a4ObvGoyjF/YIZSL7WtXQz1Xq7M98sVADypEEawzO26XMdsP3I61d1+4MQbtGKr2RDF2nC8C0n8f6yUI/EUlLr3N1Pg+LvU1bt0x1W/XGOTzzvOPg9ABAt8LNBneQWWOokqIByhMf7lMQBLdglgiABp8cBaLSoLWMzpaPqnMfon/NQqsOufDdDN0/sFCxMuB80DTcJQ08mYE54AtdicOYbuAFuypSWtJHTWAAAAAElFTkSuQmCC"/></a></li>
+      </ui>
+      
+    </footer>
+    <script src='main.js'></script>
+</body>
+</html>

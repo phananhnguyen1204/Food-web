@@ -1,0 +1,51 @@
+*{
+    font-family: 'Arvo', serif;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+--root{
+    --color-1:#333;
+}
+
+body{
+    color:#fff;
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:100%;
+}
+
+/*------------nav-bar----------*/
+.nav-bar{
+    display:flex;
+    margin:10px 20px;
+    justify-content: center;
+    align-items:center;
+}
+
+.nav-item{
+    flex:1;
+    font-size:1rem;
+    list-style: none;
+    font-weight: 400;
+    color:#333;
+
+}
+
+.nav-bar> .nav-item:nth-child(1){
+    flex:1 1 40%;
+}
+
+.nav-list{
+    text-decoration: none;
+    display:inline-block;
+    color:#333;
+}
+#logo{
+    max-width: 100px;
+}
+
+
+/*--------------main-------------*/
